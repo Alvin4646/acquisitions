@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   logger.info('Welcome to acquisitions');
   res.status(200).send('Welcome to acquisitions');
 });
-app.get('/health', (req, res) => {
+app.get('api/health', (req, res) => {
   res.status(200).json({status:'OK',timestamp:new Date().toISOString(),uptime:process.uptime()});
 })
 app.get('/api',(req,res)=>{
